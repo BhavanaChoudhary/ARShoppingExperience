@@ -32,5 +32,5 @@ An Android application that lets users browse products, view detailed descriptio
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/BhavanaChoudhary/ARVirtualShoppingApp.git
+git clone https://github.com/BhavanaChoudhary/ARShoppingExperience.git
 
