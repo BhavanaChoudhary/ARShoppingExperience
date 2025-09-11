@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/welcomeFragment">
+
+    <!-- Welcome Fragment -->
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="hackon.lifetime.shopon.fragments.WelcomeFragment"
+        android:label="Welcome"
+        tools:layout="@layout/fragment_welcome">
+
+        <action
+            android:id="@+id/action_welcome_to_login"
+            app:destination="@id/loginFragment" />
+
+        <action
+            android:id="@+id/action_welcome_to_register"
+            app:destination="@id/registerFragment" />
+
+        <action
+            android:id="@+id/action_welcome_to_home"
+            app:destination="@id/home" />
+    </fragment>
+
+    <!-- Login Fragment -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="hackon.lifetime.shopon.fragments.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/registerFragment" />
+
+        <action
+            android:id="@+id/action_login_to_home"
+            app:destination="@id/home" />
+    </fragment>
+
+    <!-- Register Fragment -->
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="hackon.lifetime.shopon.fragments.RegisterFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_register">
+
+        <!-- Navigate to Home after registration -->
+        <action
+            android:id="@+id/action_register_to_home"
+            app:destination="@id/home" />
+
+        <!-- Navigate to Login -->
+        <action
+            android:id="@+id/action_register_to_login"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <!-- Product List Fragment -->
+    <fragment
+        android:id="@+id/home"
+        android:name="hackon.lifetime.shopon.fragments.ListFragment"
+        android:label="Products"
+        tools:layout="@layout/fragment_list">
+
+        <action
+            android:id="@+id/action_home_to_detail"
+            app:destination="@id/detail" />
+    </fragment>
+
+    <!-- Product Detail Fragment -->
+    <fragment
+        android:id="@+id/detail"
+        android:name="hackon.lifetime.shopon.fragments.DetailFragment"
+        android:label="Product Detail"
+        tools:layout="@layout/fragment_detail">
+
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "35179680625",
+    "project_id": "arshoppingapp-4e6bd",
+    "storage_bucket": "arshoppingapp-4e6bd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:35179680625:android:c940a6eb38b5fafebbdcd0",
+        "android_client_info": {
+          "package_name": "hackon.lifetime.shopon"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6r2Cs_o6ovPySAWSF0NuOBMY-tror0ks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
