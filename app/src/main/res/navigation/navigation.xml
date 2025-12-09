@@ -48,18 +48,16 @@
         android:label="Register"
         tools:layout="@layout/fragment_register">
 
-        <!-- Navigate to Home after registration -->
         <action
             android:id="@+id/action_register_to_home"
             app:destination="@id/home" />
 
-        <!-- Navigate to Login -->
         <action
             android:id="@+id/action_register_to_login"
             app:destination="@id/loginFragment" />
     </fragment>
 
-    <!-- Product List Fragment -->
+    <!-- Product List Fragment (Home) -->
     <fragment
         android:id="@+id/home"
         android:name="hackon.lifetime.shopon.fragments.ListFragment"

@@ -39,26 +39,24 @@ class LoginFragment : Fragment() {
                 return@setOnClickListener
             }
 
-            try {
-                auth.signInWithEmailAndPassword(email, password)
-                    .addOnCompleteListener { task ->
-                        if (task.isSuccessful) {
-                            Toast.makeText(context, "Login Successful", Toast.LENGTH_SHORT).show()
-                            findNavController().navigate(R.id.action_login_to_home)
-                        } else {
-                            Toast.makeText(
-                                context,
-                                "Login Failed: ${task.exception?.message}",
-                                Toast.LENGTH_LONG
-                            ).show()
-                        }
+            auth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        Toast.makeText(context, "Login Successful", Toast.LENGTH_SHORT).show()
+
+                        // ⬇⬇⬇ FIXED: navigate to HOME instead of FeatureSelection
+                        findNavController().navigate(R.id.action_login_to_home)
+
+                    } else {
+                        Toast.makeText(
+                            context,
+                            "Login Failed: ${task.exception?.message}",
+                            Toast.LENGTH_LONG
+                        ).show()
                     }
-            } catch (e: Exception) {
-                Toast.makeText(context, "Error: ${e.message}", Toast.LENGTH_LONG).show()
-            }
+                }
         }
 
-        // Navigate to RegisterFragment
         binding.tvSignUp.setOnClickListener {
             findNavController().navigate(R.id.action_login_to_register)
         }
